@@ -9,6 +9,8 @@ import {
   Linkedin,
   Github,
   Twitter,
+  Facebook,
+  Instagram,
   PlayCircle,
   Image as ImageIcon,
   Briefcase,
@@ -61,8 +63,8 @@ const AbstractTabs = ({ content }) => {
             {l === "eng"
               ? "English"
               : l === "swa"
-              ? "Kiswahili"
-              : "Kikamba (Indigenous)"}
+                ? "Kiswahili"
+                : "Kikamba (Indigenous)"}
           </button>
         ))}
       </div>
@@ -113,7 +115,7 @@ function App() {
                 >
                   {item}
                 </button>
-              )
+              ),
             )}
           </div>
         </div>
@@ -154,14 +156,14 @@ function App() {
               </a>
               <div className="flex gap-2">
                 <a
-                  href="/documents/Resume_Swa.pdf"
+                  href="/documents/Resume_swa.pdf"
                   target="_blank"
                   className="flex-1 py-2 bg-white border border-gray-200 hover:border-green-600 hover:text-green-700 text-gray-700 rounded-lg text-xs transition flex items-center justify-center gap-2"
                 >
                   <Globe size={12} /> Kiswahili
                 </a>
                 <a
-                  href="/documents/Resume_Kam.pdf"
+                  href="/documents/Resume_kam.pdf"
                   target="_blank"
                   className="flex-1 py-2 bg-white border border-gray-200 hover:border-green-600 hover:text-green-700 text-gray-700 rounded-lg text-xs transition flex items-center justify-center gap-2"
                 >
@@ -188,53 +190,111 @@ function App() {
             </div>
           </Card>
 
-          {/* ONLINE PRESENCE (Item 10) */}
+          {/* ONLINE PRESENCE (Item 10) - UPDATED WITH ALL 5 PLATFORMS */}
           <Card className="p-6" id="online">
             <h3 className="font-bold text-gray-900 mb-4 border-b pb-2 flex justify-between items-center">
               <span className="flex items-center gap-2">
-                <Globe size={20} className="text-green-700" /> Online
+                <Globe size={20} className="text-green-700" /> Online Presence
               </span>
               <span className="text-[10px] bg-gray-100 px-2 py-0.5 rounded text-gray-500">
                 Item 10
               </span>
             </h3>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-3 group cursor-pointer p-2 hover:bg-gray-50 rounded-lg transition">
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/in/mateli-boniface-524159242/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 group p-2 hover:bg-gray-50 rounded-lg transition"
+              >
                 <div className="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center">
                   <Linkedin size={16} />
                 </div>
-                <span className="group-hover:text-blue-600 transition font-medium">
-                  LinkedIn Profile
+                <span className="group-hover:text-blue-600 transition font-medium text-gray-700">
+                  LinkedIn
                 </span>
                 <ExternalLink
                   size={12}
                   className="ml-auto opacity-0 group-hover:opacity-100 transition text-gray-400"
                 />
-              </li>
-              <li className="flex items-center gap-3 group cursor-pointer p-2 hover:bg-gray-50 rounded-lg transition">
+              </a>
+
+              {/* GitHub */}
+              <a
+                href="https://github.com/Mcodes23"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 group p-2 hover:bg-gray-50 rounded-lg transition"
+              >
                 <div className="w-8 h-8 rounded-full bg-gray-100 text-gray-800 flex items-center justify-center">
                   <Github size={16} />
                 </div>
-                <span className="group-hover:text-gray-900 transition font-medium">
-                  GitHub Portfolio
+                <span className="group-hover:text-gray-900 transition font-medium text-gray-700">
+                  GitHub
                 </span>
                 <ExternalLink
                   size={12}
                   className="ml-auto opacity-0 group-hover:opacity-100 transition text-gray-400"
                 />
-              </li>
-              <li className="flex items-center gap-3 group cursor-pointer p-2 hover:bg-gray-50 rounded-lg transition">
+              </a>
+
+              {/* Twitter */}
+              <a
+                href="https://x.com/boniface_mateli"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 group p-2 hover:bg-gray-50 rounded-lg transition"
+              >
                 <div className="w-8 h-8 rounded-full bg-sky-50 text-sky-500 flex items-center justify-center">
                   <Twitter size={16} />
                 </div>
-                <span className="group-hover:text-sky-500 transition font-medium">
+                <span className="group-hover:text-sky-500 transition font-medium text-gray-700">
                   Twitter / X
                 </span>
                 <ExternalLink
                   size={12}
                   className="ml-auto opacity-0 group-hover:opacity-100 transition text-gray-400"
                 />
-              </li>
+              </a>
+
+              {/* Facebook */}
+              <a
+                href="https://web.facebook.com/iammateli"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 group p-2 hover:bg-gray-50 rounded-lg transition"
+              >
+                <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center">
+                  <Facebook size={16} />
+                </div>
+                <span className="group-hover:text-blue-700 transition font-medium text-gray-700">
+                  Facebook
+                </span>
+                <ExternalLink
+                  size={12}
+                  className="ml-auto opacity-0 group-hover:opacity-100 transition text-gray-400"
+                />
+              </a>
+
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/iammateli/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 group p-2 hover:bg-gray-50 rounded-lg transition"
+              >
+                <div className="w-8 h-8 rounded-full bg-pink-50 text-pink-600 flex items-center justify-center">
+                  <Instagram size={16} />
+                </div>
+                <span className="group-hover:text-pink-600 transition font-medium text-gray-700">
+                  Instagram
+                </span>
+                <ExternalLink
+                  size={12}
+                  className="ml-auto opacity-0 group-hover:opacity-100 transition text-gray-400"
+                />
+              </a>
             </ul>
           </Card>
         </aside>
@@ -249,7 +309,6 @@ function App() {
               mark="2 & 3"
             />
             <div className="bg-white p-8 rounded-xl shadow-sm border-l-4 border-green-700 relative overflow-hidden">
-              {/* Background Pattern */}
               <div className="absolute top-0 right-0 p-4 opacity-5">
                 <FileText size={100} />
               </div>
@@ -296,7 +355,7 @@ function App() {
               mark="4 & 5"
             />
 
-            {/* VIDEO EMBEDDED HERE */}
+            {/* HELATAX VIDEO EMBED */}
             <Card className="bg-black aspect-video flex flex-col items-center justify-center relative mb-6 shadow-md overflow-hidden">
               <iframe
                 width="100%"
@@ -336,13 +395,17 @@ function App() {
               mark="6 & 7"
             />
 
-            <Card className="bg-slate-800 aspect-video flex flex-col items-center justify-center group cursor-pointer mb-6 shadow-md hover:shadow-xl transition duration-300">
-              <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-purple-600 group-hover:scale-110 transition duration-300 backdrop-blur-sm">
-                <PlayCircle size={40} className="text-white ml-1" />
-              </div>
-              <p className="text-gray-300 text-sm font-medium">
-                Watch Cultural Presentation (20 Mins)
-              </p>
+            {/* CULTURE VIDEO EMBED */}
+            <Card className="bg-black aspect-video flex flex-col items-center justify-center relative mb-6 shadow-md overflow-hidden">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/nzfSS9ULV6I"
+                title="Culture Presentation"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </Card>
 
             <div className="flex justify-end mb-4">
@@ -357,9 +420,9 @@ function App() {
 
             <AbstractTabs
               content={{
-                eng: "This presentation explores the evolution of gender roles within the Akamba community. It discusses how traditional values of communal respect can be harmonized with modern gender equality to empower both men and women in societal development.",
-                swa: "Wasilisho hili linaangazia mabadiliko ya majukumu ya kijinsia katika jamii ya Wakamba. Linajadili jinsi maadili ya asili ya heshima yanaweza kuoanishwa na usawa wa kijinsia wa kisasa ili kuwezesha maendeleo kwa wote.",
-                kam: "Mumbyle uu niukulianya maundu ma kiutui na mawira ma aka na aume nthini wa Wakamba. Niukneena iele wianyo wa kithio na maendeeo ma mituki.",
+                eng: "This presentation explores Ubuntu, a foundational principle of African culture emphasizing communal living, shared responsibility, and collective identity. It examines how traditional African societies valued cooperation over individualism and how this worldview shaped social organization, leadership, and gender relations across East, West, and Southern Africa. Contrary to common misconceptions, the study highlights that pre-colonial African societies often practiced complementary gender roles that allowed women significant economic, political, and social influence. The presentation further analyzes how colonial systems disrupted this balance by introducing foreign patriarchal structures that marginalized women and redefined gender roles. Finally, the discussion emphasizes the importance of gender awareness in contemporary African society, arguing that sustainable development requires reclaiming indigenous values of balance, inclusion, and partnership between men and women. The presentation concludes that gender equality aligns with African cultural heritage and is essential for Africa’s future growth and unity.",
+                swa: "Wasilisho hili linachunguza Ubuntu, kanuni ya msingi ya utamaduni wa Kiafrika inayosisitiza maisha ya kijamii, uwajibikaji wa pamoja, na utambulisho wa kundi. Linachunguza jinsi jamii za asili za Kiafrika zilivyothamini ushirikiano kuliko ubinafsi na jinsi mtazamo huu ulivyojenga mipangilio ya kijamii, uongozi, na mahusiano ya kijinsia kote Afrika Mashariki, Magharibi, na Kusini. Kinyume na dhana potofu, utafiti huu unabainisha kuwa jamii za Kiafrika kabla ya ukoloni mara nyingi zilikuwa na majukumu ya kijinsia yanayokamilishana ambayo yaliwapa wanawake ushawishi mkubwa kiuchumi, kisiasa, na kijamii. Wasilisho linachambua zaidi jinsi mifumo ya kikoloni ilivyovuruga uwiano huu kwa kuleta mifumo dume ya kigeni iliyowatenga wanawake na kuelezea upya majukumu ya kijinsia. Hatimaye, mjadala unasisitiza umuhimu wa ufahamu wa kijinsia katika jamii ya kisasa ya Kiafrika, ukijenga hoja kwamba maendeleo endelevu yanahitaji kurudisha maadili ya asili ya uwiano, ushirikishwaji, na ushirikiano kati ya wanaume na wanawake. Wasilisho linahitimisha kuwa usawa wa kijinsia unaendana na urithi wa kitamaduni wa Kiafrika na ni muhimu kwa ukuaji na umoja wa baadaye wa Afrika.",
+                kam: "Mumbyle uu niukulianya maundu ma Ubuntu, mwango mume wa kithio kya Africa ula wionany'a kwikala vamwe ta utui, kwiikwatya, na wianyo. Niukulianya iele ndui sya tene sya Africa syatalaa kwikwatya muno kwi kwikala weka na iele woni uu waumiisye mikalile ya andu, utongesi, na ngwatanio ya aka na aume Africa yonthe. Kusoma kuu nikukwonany'a kana ndui sya Africa mbee wa ukoloni syai na mawira ma aka na aume mena utethyo mwingi ula wanengae aka uwezo wa mbesa, utongesi, na kiutui. Mumbyle uu niukuchambua iele ukoloni waanangie muvango uu kwa kuete mifumo ya kigeni ya kuumya aka phambeni na kalyula mawira ma aka na aume. Mwisho, uneeni uu niukwitikila vata wa umanyi wa mawira ma aka na aume, ukyasya kana maendeeo me w'o mendaa tucokie kithio kya utui, kwiikwatya, na ngwatanio kati wa aume na aka. Mumbyle uu uminie na kwasya kana kwiiana kwa aka na aume nikwosana na kithio kya Africa na ni kwa vata muno kwond wa maendeeo na ngwatanio ya Africa.",
               }}
             />
           </section>
@@ -372,13 +435,16 @@ function App() {
               mark="8"
             />
 
-            <Card className="bg-slate-800 aspect-video flex flex-col items-center justify-center group cursor-pointer mb-6 shadow-md hover:shadow-xl transition duration-300">
-              <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-blue-600 group-hover:scale-110 transition duration-300 backdrop-blur-sm">
-                <PlayCircle size={40} className="text-white ml-1" />
-              </div>
-              <p className="text-gray-300 text-sm font-medium">
-                Watch Solution Presentation (20 Mins)
-              </p>
+            <Card className="bg-black aspect-video flex flex-col items-center justify-center relative mb-6 shadow-md overflow-hidden">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/rjFyYylGeto"
+                title="Challenges Presentation"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </Card>
 
             <AbstractTabs
